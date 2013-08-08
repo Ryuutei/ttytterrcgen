@@ -26,10 +26,10 @@ WTFPL (see LICENCE file)
 
 - at last you can use built in location or add them manually like:
 
-`"location name (the string you will use in the shell)" => [ 'lat', 'long' , trendid/woeid , [ "timezone", "elevation",] ]`
+`"location name (the string you will use in the shell)" => 
+    [ 'lat', 'long' , trendid/woeid , [ "timezone", "elevation",] ]`
 
-    The trendid/woeid is an integer.
-As for the timezone and elevations it's just useless stuff. 
+( The trendid/woeid is an integer. As for the timezone and elevations it's just useless stuff. )
 
 
 ### Notes:
@@ -48,6 +48,7 @@ if the location contains spaces you must type:
 ## Example:
 
 `ttytterrcgen.rb Shanghai`
+
 `ttytterrcgen.rb "Cap Breton"`
 
 ## Stuff I didn't code:
