@@ -54,8 +54,10 @@ if the location contains spaces you must type:
 ## Stuff I didn't code:
 
 - configuration stuff I don't use... 
-- things I never change. (ssh/ansi/) (like the avatar) 
+- things I never change. (ssh/ansi/ or like the /url command output stuff...) 
 - I should add the hold option...
+
+... I may add these later ...
 
 ## Final note:
 
