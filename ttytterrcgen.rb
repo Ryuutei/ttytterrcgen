@@ -19,11 +19,9 @@ $line = "#======================================================================
 #== DATABASE begin =============================================================
 
 $friends = [
-    "@xah_lee" ,
-    "@lemasney" , "@tech_arts" ,
-    "@Frederic_Molas" , "@Seb_du_Grenier" ,
-    "@vertpotam" ,
-    "@raymondh" , 
+    "@xah_lee" , "@raymondh" ,
+    "@tech_arts" , "@vertpotam" ,
+    "@hello_nico" ,
     ]
 
 $tracking = [
@@ -54,15 +52,13 @@ $ui_colors = {
     'colourwarn'    => 'MAGENTA',
 }
 
-$plugins = [
-    "",
+$plugins = [ "",
 ]
 
 $locations = {
     # "location" => [ 'lat', 'long' , trendid/woeid , [ "timezone", "elevation",] ]
     # http://www.flickr.com/places/info/1
     # France
-    "Colomiers" => [ "lat=43.625146", "long=1.331790", 55863628, [ 'UTC?', "180m", ]  ],
     "Capitole" => [ "lat=43.604413", "long=1.443373", 12657325, [ 'UTC?', "151m", ]  ],
     "Toulouse" => [ "lat=43.604413", "long=1.443373", 12597186, [ 'UTC?', "151m", ]  ],
 
@@ -73,7 +69,7 @@ $locations = {
     "Leon" => [ "lat=43.875833", "long=-1.302794", 7153309, [ 'UTC?', "20m", ]  ],
 
     # Thailand
-    "NNY" => [ "lat=14.203184", "long=101.217236", 2347168, [ 'UTC?', "11m", ]  ],
+    "BKK" => [ "lat=13.696477", "long=100.754956", 2347165, [ 'UTC?', "2m", ]  ],
 
     # China. woeid: 23424781
     #       Guyang, Guizhou,
@@ -100,8 +96,6 @@ $locations = {
     }
 
 #== DATABASE end ===============================================================
-#===============================================================================
-
 
 def main ()
         if $*[0] == "--help" or $*[0] == "-H" then intro
@@ -116,7 +110,7 @@ def gen_rc (loc)
     " Don't forget to add "" around friends. "
     rc = gen_mainsettings +
         gen_stuff(['exts', "Plugins"], $plugins, ',', []) +
-        gen_stuff(['readline', "Friends/readline"], $friends, ',', ['"', '"']) +
+        gen_stuff(['readline', "Friends/readline"], $friends, ' ', ['"', '"']) +
         gen_stuff(['filter', "Filters"], $filter, '|', ['(', ')']) +
         gen_stuff(['track', "Tracked Topics"], $tracking, ' ', [])
 
